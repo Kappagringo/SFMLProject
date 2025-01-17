@@ -1,0 +1,3 @@
+C:/Users/jdavis/CLionProjects/MySFMLProject/build/CMakeFiles/MySFMLProject.dir
+C:/Users/jdavis/CLionProjects/MySFMLProject/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/jdavis/CLionProjects/MySFMLProject/build/CMakeFiles/ZERO_CHECK.dir
