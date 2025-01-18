@@ -1071,11 +1071,11 @@
 				},
 				{
 					"name" : "HELPSTRING",
-					"value" : "The CMake toolchain file"
+					"value" : "No help, variable specified on the command line."
 				}
 			],
-			"type" : "FILEPATH",
-			"value" : "C:/Users/jdavis/CLionProjects/MySFMLProject/vcpkg/scripts/buildsystems/vcpkg.cmake"
+			"type" : "UNINITIALIZED",
+			"value" : "C:/Users/jdavis/ClionProjects/MySFMLProject/vcpkg/scripts/buildsystems/vcpkg.cmake"
 		},
 		{
 			"name" : "CMAKE_VERBOSE_MAKEFILE",
