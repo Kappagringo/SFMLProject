@@ -2,11 +2,13 @@
 #define GAME_H
 
 #include <SFML/Graphics.hpp>
-#include <vector>
-#include <string>
-#include "cursor.h"
+#include <memory>
+#include "menu.h"
+#include "cursor.h" // Ensure Cursor is included
 
 namespace RatBoiGaming {
+
+    enum class GameState { MAIN_MENU, PLAYING };
 
     class Game {
     public:
@@ -14,30 +16,18 @@ namespace RatBoiGaming {
         void run();
 
     private:
-        enum class GameState {
-            MAIN_MENU,
-            PLAYING
-        };
-
         void processEvents();
         void update();
         void render();
 
-        void handleMainMenuInput();
-        void renderMainMenu();
-
-        GameState m_state;
-
         sf::RenderWindow m_window;
         sf::Font m_font;
-
-        sf::Text m_titleText;
-        sf::Text m_startText;
-        sf::Text m_exitText;
-
-        Cursor m_cursor; // Cursor object
+        GameState m_state;
+        std::unique_ptr<Menu> m_menu; // Menu object
+        Cursor m_cursor;             // Custom cursor object
     };
 
 } // namespace RatBoiGaming
 
-#endif
+#endif // GAME_H
+

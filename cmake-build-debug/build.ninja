@@ -73,6 +73,14 @@ build CMakeFiles\MySFMLProject.dir\cursor.cpp.obj: CXX_COMPILER__MySFMLProject_u
   TARGET_COMPILE_PDB = CMakeFiles\MySFMLProject.dir\
   TARGET_PDB = MySFMLProject.pdb
 
+build CMakeFiles\MySFMLProject.dir\menu.cpp.obj: CXX_COMPILER__MySFMLProject_unscanned_Debug C$:\Users\jdavis\CLionProjects\MySFMLProject\menu.cpp || cmake_object_order_depends_target_MySFMLProject
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Ob0 /Od /RTC1 -std:c++17 -MDd -Zi
+  INCLUDES = -external:IC:\Users\jdavis\CLionProjects\MySFMLProject\vcpkg\installed\x64-windows\include -external:W0
+  OBJECT_DIR = CMakeFiles\MySFMLProject.dir
+  OBJECT_FILE_DIR = CMakeFiles\MySFMLProject.dir
+  TARGET_COMPILE_PDB = CMakeFiles\MySFMLProject.dir\
+  TARGET_PDB = MySFMLProject.pdb
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target MySFMLProject
@@ -81,7 +89,7 @@ build CMakeFiles\MySFMLProject.dir\cursor.cpp.obj: CXX_COMPILER__MySFMLProject_u
 #############################################
 # Link the executable MySFMLProject.exe
 
-build MySFMLProject.exe: CXX_EXECUTABLE_LINKER__MySFMLProject_Debug CMakeFiles\MySFMLProject.dir\main.cpp.obj CMakeFiles\MySFMLProject.dir\game.cpp.obj CMakeFiles\MySFMLProject.dir\cursor.cpp.obj | C$:\Users\jdavis\CLionProjects\MySFMLProject\vcpkg\installed\x64-windows\debug\lib\sfml-audio-d.lib C$:\Users\jdavis\CLionProjects\MySFMLProject\vcpkg\installed\x64-windows\debug\lib\SFGUI-d.lib C$:\Users\jdavis\CLionProjects\MySFMLProject\vcpkg\installed\x64-windows\debug\lib\sfml-graphics-d.lib C$:\Users\jdavis\CLionProjects\MySFMLProject\vcpkg\installed\x64-windows\debug\lib\sfml-window-d.lib C$:\Users\jdavis\CLionProjects\MySFMLProject\vcpkg\installed\x64-windows\debug\lib\sfml-system-d.lib
+build MySFMLProject.exe: CXX_EXECUTABLE_LINKER__MySFMLProject_Debug CMakeFiles\MySFMLProject.dir\main.cpp.obj CMakeFiles\MySFMLProject.dir\game.cpp.obj CMakeFiles\MySFMLProject.dir\cursor.cpp.obj CMakeFiles\MySFMLProject.dir\menu.cpp.obj | C$:\Users\jdavis\CLionProjects\MySFMLProject\vcpkg\installed\x64-windows\debug\lib\sfml-audio-d.lib C$:\Users\jdavis\CLionProjects\MySFMLProject\vcpkg\installed\x64-windows\debug\lib\SFGUI-d.lib C$:\Users\jdavis\CLionProjects\MySFMLProject\vcpkg\installed\x64-windows\debug\lib\sfml-graphics-d.lib C$:\Users\jdavis\CLionProjects\MySFMLProject\vcpkg\installed\x64-windows\debug\lib\sfml-window-d.lib C$:\Users\jdavis\CLionProjects\MySFMLProject\vcpkg\installed\x64-windows\debug\lib\sfml-system-d.lib
   FLAGS = /DWIN32 /D_WINDOWS /EHsc /Ob0 /Od /RTC1 -MDd -Zi
   LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:console
   LINK_LIBRARIES = C:\Users\jdavis\CLionProjects\MySFMLProject\vcpkg\installed\x64-windows\debug\lib\sfml-audio-d.lib  C:\Users\jdavis\CLionProjects\MySFMLProject\vcpkg\installed\x64-windows\debug\lib\SFGUI-d.lib  C:\Users\jdavis\CLionProjects\MySFMLProject\vcpkg\installed\x64-windows\debug\lib\sfml-graphics-d.lib  C:\Users\jdavis\CLionProjects\MySFMLProject\vcpkg\installed\x64-windows\debug\lib\sfml-window-d.lib  C:\Users\jdavis\CLionProjects\MySFMLProject\vcpkg\installed\x64-windows\debug\lib\sfml-system-d.lib  opengl32.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib

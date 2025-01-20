@@ -1,7 +1,7 @@
 #include "game.h"
 
 int main() {
-    RatBoiGaming::Game game("SFMLProject-Game", 800, 600);
+    RatBoiGaming::Game game("SFMLProject-Game", 1800, 1400);
     game.run();
 
     return 0;

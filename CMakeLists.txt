@@ -14,7 +14,9 @@ add_executable(MySFMLProject main.cpp
         game.cpp
         game.h
         cursor.cpp
-        cursor.h)
+        cursor.h
+        menu.cpp
+        menu.h)
 
 target_link_libraries(MySFMLProject PRIVATE
         sfml-system
