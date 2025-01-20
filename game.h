@@ -5,7 +5,7 @@
 #include <memory>
 #include "menu.h"
 #include "cursor.h" // Ensure Cursor is included
-
+#include <SFML/Audio.hpp>
 namespace RatBoiGaming {
 
     enum class GameState { MAIN_MENU, PLAYING };
@@ -24,7 +24,8 @@ namespace RatBoiGaming {
         sf::Font m_font;
         GameState m_state;
         std::unique_ptr<Menu> m_menu; // Menu object
-        Cursor m_cursor;             // Custom cursor object
+        Cursor m_cursor; // custom cursor object
+        sf::Music m_backgroundMusic; //Main Menu Background Music
     };
 
 } // namespace RatBoiGaming

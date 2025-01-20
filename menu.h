@@ -26,6 +26,9 @@ namespace RatBoiGaming {
         std::vector<std::string> m_menuLabels; // Labels for the menu items
         int m_selectedIndex;
         Cursor m_cursor; // Custom cursor
+        sf::Text m_titleText; // Title for the main menu
+        sf::Font m_titleFont; // Font for the title
+
 
 
         void updateSelection(const sf::Vector2f& mousePosition);

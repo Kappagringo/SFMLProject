@@ -33,4 +33,6 @@ add_custom_command(
         "${CMAKE_SOURCE_DIR}/nunito.ttf"
         $<TARGET_FILE_DIR:MySFMLProject>
 )
+# Copy Assets folder to the build directory
+file(COPY ${CMAKE_SOURCE_DIR}/Assets DESTINATION ${CMAKE_BINARY_DIR})
 

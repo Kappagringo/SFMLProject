@@ -16,6 +16,14 @@ namespace RatBoiGaming {
 
         // Initialize the main menu
         m_menu = std::make_unique<Menu>(m_font, width, height);
+
+        // Load and configure the background music
+        if (!m_backgroundMusic.openFromFile("Assets/Desolate-MM.wav")) {
+            std::cerr << "Failed to load background music!" << std::endl;
+            exit(-1);
+        }
+        m_backgroundMusic.setLoop(true);
+        m_backgroundMusic.setVolume(75); // Set volume to 50%
     }
 
     void Game::run() {
@@ -39,6 +47,7 @@ namespace RatBoiGaming {
 
                 if (selectedOption == 0) { // New Game
                     m_state = GameState::PLAYING;
+                    m_backgroundMusic.stop();
                 } else if (selectedOption == 1) { // Load Save
                     std::cout << "Load Save selected\n";
                 } else if (selectedOption == 2) { // Options
@@ -52,9 +61,15 @@ namespace RatBoiGaming {
 
     void Game::update() {
         if (m_state == GameState::MAIN_MENU) {
+            if (m_backgroundMusic.getStatus() != sf::Music::Playing) {
+                m_backgroundMusic.play();
+            }
             m_menu->update(m_window);
-        } else if (m_state == GameState::PLAYING) {
-            m_cursor.update(m_window); // Cursor update for gameplay
+        } else {
+            if (m_backgroundMusic.getStatus() == sf::Music::Playing) {
+                m_backgroundMusic.stop();
+            }
+            m_cursor.update(m_window); // Future gameplay update logic
         }
     }
 
