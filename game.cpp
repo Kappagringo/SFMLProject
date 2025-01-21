@@ -23,7 +23,7 @@ namespace RatBoiGaming {
             exit(-1);
         }
         m_backgroundMusic.setLoop(true);
-        m_backgroundMusic.setVolume(75); // Set volume to 50%
+        m_backgroundMusic.setVolume(50);
     }
 
     void Game::run() {
