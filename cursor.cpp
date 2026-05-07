@@ -6,6 +6,7 @@ namespace RatBoiGaming {
         m_cursorShape.setRadius(5.0f);
         m_cursorShape.setFillColor(sf::Color::Black);
         m_cursorShape.setOrigin({5.0f, 5.0f});
+        m_cursorShape.setOrigin(5.0f, 5.0f); // Center the shape
     }
 
     void Cursor::update(const sf::RenderWindow& window) {
@@ -22,3 +23,4 @@ namespace RatBoiGaming {
     }
 
 } // namespace RatBoiGaming
+

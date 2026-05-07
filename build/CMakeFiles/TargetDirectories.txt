@@ -1,3 +1,0 @@
-C:/Users/jdavis/Downloads/SFMLProject-SFML3-fixed/SFMLProject-updated/build/CMakeFiles/MySFMLProject.dir
-C:/Users/jdavis/Downloads/SFMLProject-SFML3-fixed/SFMLProject-updated/build/CMakeFiles/ALL_BUILD.dir
-C:/Users/jdavis/Downloads/SFMLProject-SFML3-fixed/SFMLProject-updated/build/CMakeFiles/ZERO_CHECK.dir

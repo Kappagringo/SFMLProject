@@ -1,0 +1,10 @@
+^C:\USERS\JDAVIS\CLIONPROJECTS\MYSFMLPROJECT\CMAKE-BUILD-VS2022\CMAKEFILES\2E9E222B7D49DD9B03763D1F304B731C\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/jdavis/CLionProjects/MySFMLProject -BC:/Users/jdavis/CLionProjects/MySFMLProject/cmake-build-vs2022 --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/jdavis/CLionProjects/MySFMLProject/cmake-build-vs2022/MySFMLProject.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

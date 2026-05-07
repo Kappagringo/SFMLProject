@@ -1,2 +1,0 @@
-C:/Users/jdavis/Downloads/SFMLProject-SFML3-fixed/SFMLProject-updated/build/vcpkg_installed/vcpkg/blds/detect_compiler/x64-windows-rel/CMakeFiles/edit_cache.dir
-C:/Users/jdavis/Downloads/SFMLProject-SFML3-fixed/SFMLProject-updated/build/vcpkg_installed/vcpkg/blds/detect_compiler/x64-windows-rel/CMakeFiles/rebuild_cache.dir

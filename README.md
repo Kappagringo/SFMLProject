@@ -1,4 +1,5 @@
 # SFMLProject
+<<<<<<< HEAD
 
 A small SFML game prototype with a main menu, loading screen, and an empty playable winter scene.
 
@@ -37,3 +38,6 @@ The executable should be created at:
 ```txt
 build\Debug\MySFMLProject.exe
 ```
+=======
+SFML attempt
+>>>>>>> e9ea8f4e26d3e58fbb38d61516859404e7f42a65

@@ -11,6 +11,13 @@
 namespace RatBoiGaming {
 
     enum class GameState { MAIN_MENU, LOADING, PLAYING };
+#include <memory>
+#include "menu.h"
+#include "cursor.h" // Ensure Cursor is included
+#include <SFML/Audio.hpp>
+namespace RatBoiGaming {
+
+    enum class GameState { MAIN_MENU, PLAYING };
 
     class Game {
     public:
@@ -46,6 +53,9 @@ namespace RatBoiGaming {
         float m_playerSpeed;
         int m_windowWidth;
         int m_windowHeight;
+        std::unique_ptr<Menu> m_menu; // Menu object
+        Cursor m_cursor; // custom cursor object
+        sf::Music m_backgroundMusic; //Main Menu Background Music
     };
 
 } // namespace RatBoiGaming

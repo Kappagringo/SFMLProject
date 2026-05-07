@@ -74,6 +74,25 @@ namespace RatBoiGaming {
         m_helpText.setCharacterSize(24);
         m_helpText.setFillColor(sf::Color::Black);
         m_helpText.setPosition({25.0f, 25.0f});
+        : m_window(sf::VideoMode(width, height), title), m_state(GameState::MAIN_MENU), m_cursor(), m_menu(nullptr) {
+        // Hide the system cursor
+        m_window.setMouseCursorVisible(false);
+
+        if (!m_font.loadFromFile("nunito.ttf")) {
+            std::cerr << "Failed to load font!" << std::endl;
+            exit(-1);
+        }
+
+        // Initialize the main menu
+        m_menu = std::make_unique<Menu>(m_font, width, height);
+
+        // Load and configure the background music
+        if (!m_backgroundMusic.openFromFile("Assets/Desolate-MM.wav")) {
+            std::cerr << "Failed to load background music!" << std::endl;
+            exit(-1);
+        }
+        m_backgroundMusic.setLoop(true);
+        m_backgroundMusic.setVolume(50);
     }
 
     void Game::run() {
@@ -87,6 +106,9 @@ namespace RatBoiGaming {
     void Game::processEvents() {
         while (const std::optional event = m_window.pollEvent()) {
             if (event->is<sf::Event::Closed>()) {
+        sf::Event event;
+        while (m_window.pollEvent(event)) {
+            if (event.type == sf::Event::Closed) {
                 m_window.close();
             }
 
@@ -108,6 +130,18 @@ namespace RatBoiGaming {
                 if (keyPressed != nullptr && keyPressed->code == sf::Keyboard::Key::Escape) {
                     m_state = GameState::MAIN_MENU;
                     m_clock.restart();
+                }
+                m_menu->handleEvent(m_window, event, selectedOption);
+
+                if (selectedOption == 0) { // New Game
+                    m_state = GameState::PLAYING;
+                    m_backgroundMusic.stop();
+                } else if (selectedOption == 1) { // Load Save
+                    std::cout << "Load Save selected\n";
+                } else if (selectedOption == 2) { // Options
+                    std::cout << "Options selected\n";
+                } else if (selectedOption == 3) { // Exit
+                    m_window.close();
                 }
             }
         }
@@ -191,6 +225,20 @@ namespace RatBoiGaming {
         m_player.setPosition(pos);
     }
 
+    void Game::update() {
+        if (m_state == GameState::MAIN_MENU) {
+            if (m_backgroundMusic.getStatus() != sf::Music::Playing) {
+                m_backgroundMusic.play();
+            }
+            m_menu->update(m_window);
+        } else {
+            if (m_backgroundMusic.getStatus() == sf::Music::Playing) {
+                m_backgroundMusic.stop();
+            }
+            m_cursor.update(m_window); // Future gameplay update logic
+        }
+    }
+
     void Game::render() {
         m_window.clear(sf::Color::Black);
 
@@ -219,3 +267,11 @@ namespace RatBoiGaming {
     }
 
 } // namespace RatBoiGaming
+        }
+
+        m_cursor.render(m_window); // Render the cursor
+        m_window.display();
+    }
+
+} // namespace RatBoiGaming
+

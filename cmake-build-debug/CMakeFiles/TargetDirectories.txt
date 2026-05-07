@@ -1,0 +1,3 @@
+C:/Users/jdavis/CLionProjects/MySFMLProject/cmake-build-debug/CMakeFiles/MySFMLProject.dir
+C:/Users/jdavis/CLionProjects/MySFMLProject/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/jdavis/CLionProjects/MySFMLProject/cmake-build-debug/CMakeFiles/rebuild_cache.dir
